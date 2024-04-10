@@ -1,0 +1,7 @@
+﻿  tangyLink.cpp
+C:\Users\qubec\Documents\Development\ProjektyVC\tangyLink\tangyLink\tangyLink.cpp(31,34): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\qubec\Documents\Development\ProjektyVC\tangyLink\tangyLink\tangyLink.cpp(50,50): warning C4267: 'argument': conversion from 'size_t' to 'uint32_t', possible loss of data
+C:\Users\qubec\Documents\Development\ProjektyVC\tangyLink\tangyLink\tangyLink.cpp(135,47): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\qubec\Documents\Development\ProjektyVC\tangyLink\tangyLink\tangyLink.cpp(154,49): warning C4267: 'argument': conversion from 'size_t' to 'uint32_t', possible loss of data
+C:\Users\qubec\Documents\Development\ProjektyVC\tangyLink\tangyLink\tangyLink.cpp(202,46): warning C4267: 'argument': conversion from 'size_t' to 'uint32_t', possible loss of data
+  tangyLink.vcxproj -> C:\Users\qubec\Documents\Development\ProjektyVC\tangyLink\tangyLink\x64\Debug\tangyLink.exe
