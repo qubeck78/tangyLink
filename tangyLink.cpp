@@ -58,7 +58,7 @@ int main(int argc, char* argv[])
 	int rv;
 	wchar_t  comPortWs[256];
 	char	 fileNameBuf[256];
-	char	 fileBuf[32];	
+	uint8_t	 fileBuf[32];	
 	FILE	*in;
 	int		 fileLength;
 
