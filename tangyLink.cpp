@@ -57,23 +57,27 @@ int main(int argc, char* argv[])
 
 	int rv;
 	wchar_t  comPortWs[256];
-	char	 fileBuf[32];
+	char	 fileNameBuf[256];
+	char	 fileBuf[32];	
+	FILE	*in;
+	int		 fileLength;
+
 	char	 txBuf[512];
 	char     numBuf[16];
 
-	FILE	*in;
-	int		 fileLength;
 	int		 rb;
 	uint8_t	 rxb;
+	uint8_t	 lrc;
+
 	int		 retransmission;
 	int		 fatalError;
 	int		 baudRate;
 
-	printf("tangyLink B20240328 -#qUBECk#-\n");
+	printf("tangyLink B20240410 -#qUBECk#-\n");
 
 	if (argc < 4)
 	{
-		printf("usage: tangyLink file comPort baudrate\n\nExample: tangyLink image.jpg com1 460800\n\n");
+		printf("usage: tangyLink file comPort baudrate\n\nExample: tangyLink image.jpg com1 230400\n\n");
 		return 20;
 	}
 
@@ -143,13 +147,21 @@ int main(int argc, char* argv[])
 			{
 				//send line via uart
 
+				lrc = (uint8_t)':';
+				lrc ^= rb;
+
+					
 				sprintf( txBuf, ":01%02X", rb );
 				for (i = 0; i < rb; i++)
 				{
 					sprintf( numBuf, "%02X", fileBuf[i] );
 					strcat( txBuf, numBuf );
+
+					lrc ^= fileBuf[i];
+
 				}
-				strcat( txBuf, "00\n" );
+				sprintf( numBuf, "%02X\n", lrc );
+				strcat( txBuf, numBuf );
 
 				com.write( (uint8_t*)txBuf, strlen( txBuf ) );
 
