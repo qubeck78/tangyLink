@@ -9,11 +9,46 @@
 CSerial com;
 
 
+char* stripPath(char* fileName)
+{
+	int		fnameLength;
+	int		i;
+	char	c;
+
+	if (fileName == NULL)
+	{
+		return NULL;
+	}
+
+	fnameLength = strlen( fileName );
+
+	if (fnameLength < 2 )
+	{
+		return fileName;
+	}
+
+	for( i = fnameLength - 2; i >= 0; i--)
+	{
+		c = fileName[i];
+
+		if ((c == '/') || (c == '\\' ) || ( c == ':' ) )
+		{
+			//fname end
+			return &fileName[i + 1];
+
+		}
+	}
+
+	return fileName;
+
+}
+
+
 int sendFileInfo(CSerial* com, char* fileName, int fileLength)
 {
 	char	buf[1024];
 	char	buf2[32];
-
+	char	*fileNameWOPath;
 	int		i;
 	int		fnameLength;
 
@@ -26,9 +61,12 @@ int sendFileInfo(CSerial* com, char* fileName, int fileLength)
 		return 1;
 	}
 
+	fileNameWOPath = stripPath( fileName );
+
+
 	strcpy( buf, ":00" );
 
-	fnameLength = strlen( fileName );
+	fnameLength = strlen( fileNameWOPath );
 
 	sprintf( buf2, "%02X", fnameLength );
 
@@ -36,7 +74,7 @@ int sendFileInfo(CSerial* com, char* fileName, int fileLength)
 	
 	for (i = 0; i < fnameLength; i++)
 	{
-		sprintf( buf2, "%02X", fileName[i] );
+		sprintf( buf2, "%02X", fileNameWOPath[i] );
 		strcat( buf, buf2 );
 	}
 
@@ -73,7 +111,7 @@ int main(int argc, char* argv[])
 	int		 fatalError;
 	int		 baudRate;
 
-	printf("tangyLink B20240410 -#qUBECk#-\n");
+	printf("tangyLink B20240416 -#qUBECk#-\n");
 
 	if (argc < 4)
 	{

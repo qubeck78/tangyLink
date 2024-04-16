@@ -1,8 +1,9 @@
 ﻿  tangyLink.cpp
-C:\Users\qubec\Documents\Development\ProjektyVC\tangyLink\tangyLink\tangyLink.cpp(31,34): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\qubec\Documents\Development\ProjektyVC\tangyLink\tangyLink\tangyLink.cpp(50,50): warning C4267: 'argument': conversion from 'size_t' to 'uint32_t', possible loss of data
-C:\Users\qubec\Documents\Development\ProjektyVC\tangyLink\tangyLink\tangyLink.cpp(139,47): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\qubec\Documents\Development\ProjektyVC\tangyLink\tangyLink\tangyLink.cpp(166,49): warning C4267: 'argument': conversion from 'size_t' to 'uint32_t', possible loss of data
-C:\Users\qubec\Documents\Development\ProjektyVC\tangyLink\tangyLink\tangyLink.cpp(214,46): warning C4267: 'argument': conversion from 'size_t' to 'uint32_t', possible loss of data
-C:\Users\qubec\Documents\Development\ProjektyVC\tangyLink\tangyLink\tangyLink.cpp(60,8): warning C4101: 'fileNameBuf': unreferenced local variable
+C:\Users\qubec\Documents\Development\ProjektyVC\tangyLink\tangyLink\tangyLink.cpp(23,34): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\qubec\Documents\Development\ProjektyVC\tangyLink\tangyLink\tangyLink.cpp(69,40): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\qubec\Documents\Development\ProjektyVC\tangyLink\tangyLink\tangyLink.cpp(88,50): warning C4267: 'argument': conversion from 'size_t' to 'uint32_t', possible loss of data
+C:\Users\qubec\Documents\Development\ProjektyVC\tangyLink\tangyLink\tangyLink.cpp(177,47): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\qubec\Documents\Development\ProjektyVC\tangyLink\tangyLink\tangyLink.cpp(204,49): warning C4267: 'argument': conversion from 'size_t' to 'uint32_t', possible loss of data
+C:\Users\qubec\Documents\Development\ProjektyVC\tangyLink\tangyLink\tangyLink.cpp(252,46): warning C4267: 'argument': conversion from 'size_t' to 'uint32_t', possible loss of data
+C:\Users\qubec\Documents\Development\ProjektyVC\tangyLink\tangyLink\tangyLink.cpp(98,8): warning C4101: 'fileNameBuf': unreferenced local variable
   tangyLink.vcxproj -> C:\Users\qubec\Documents\Development\ProjektyVC\tangyLink\tangyLink\x64\Debug\tangyLink.exe
